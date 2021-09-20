@@ -16,9 +16,9 @@ export let SWAP_PROGRAM_ID = new PublicKey(
 );
 
 export const PROGRAM_IDS = [
-  {
-    name: "mainnet-beta",
-  },
+  // {
+  //   name: "mainnet-beta",
+  // },
   {
     name: "testnet",
   },

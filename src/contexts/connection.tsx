@@ -16,26 +16,26 @@ import { TokenListProvider, ENV as ChainID, TokenInfo } from "@solana/spl-token-
 import { WalletAdapter } from "@solana/wallet-adapter-base";
 
 export type ENV =
-  | "mainnet-beta"
+  // | "mainnet-beta"
   | "testnet"
   | "devnet"
   | "localnet";
 
 export const ENDPOINTS = [
+  // {
+  //   name: "mainnet-beta" as ENV,
+  //   endpoint: "https://solana-api.projectserum.com/",
+  //   chainID: ChainID.MainnetBeta,
+  // },
   {
-    name: "mainnet-beta" as ENV,
-    endpoint: "https://solana-api.projectserum.com/",
-    chainID: ChainID.MainnetBeta,
+    name: "devnet" as ENV,
+    endpoint: clusterApiUrl("devnet"),
+    chainID: ChainID.Devnet,
   },
   {
     name: "testnet" as ENV,
     endpoint: clusterApiUrl("testnet"),
     chainID: ChainID.Testnet,
-  },
-  {
-    name: "devnet" as ENV,
-    endpoint: clusterApiUrl("devnet"),
-    chainID: ChainID.Devnet,
   },
   {
     name: "localnet" as ENV,
